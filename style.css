@@ -1,0 +1,18 @@
+:root {
+    --back-one: #1a1c20;
+    --back-nav: #151419;
+    --back-button-link: #1E1D24;
+    --border-button-link: #25262C;
+    --color-line: #666971;
+    --blue-color: #1484ff;
+    --nav-button-icon: #25242B;
+    --title-number-div: #27282F;
+    --title-number-div-color: #8E8E97;
+    --color-text-sub: #797A82;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
