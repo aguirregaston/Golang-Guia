@@ -90,3 +90,18 @@
     gap: 5px;
     margin-bottom: 15px;
   }
+
+  @media screen and (min-width: 1920px) {
+    .one {
+      width: 30%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: var(--back-nav);
+    }
+
+    .two {
+      padding-left: 30%;
+    }
+  }
