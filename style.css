@@ -81,6 +81,7 @@
   .subtitle-text {
     font-size: 1.1em;
     color: var(--color-title);
+    margin-top: 15px;
     margin-bottom: 5px;
   }
 
@@ -89,6 +90,10 @@
     font-size: 0.90em;
     gap: 5px;
     margin-bottom: 15px;
+  }
+
+  code {
+    color: var(--color-line);
   }
 
   @media screen and (min-width: 1920px) {

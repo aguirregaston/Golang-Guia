@@ -87,7 +87,150 @@
                 Además, Go proporciona estructuras de datos como array, slice, map y struct.
               </p>
             </div>
+        </div>
+        <div class="content-section">
+          <div class="title-section">
+            <div class="title-circle"></div>
+            <div class="title-number">4</div>
+            <p class="title-text">Variables y constantes en Go</p>
           </div>
+          <div>
+            <p class="text-sub">
+              Para declarar una variable en Go, utiliza la palabra clave var seguida del nombre de la variable y su tipo. Por ejemplo:
+            </p>
+            <code>
+              var x int
+            </code>
+            <p class="text-sub">
+              Para asignar un valor a una variable, utiliza el operador =. Por ejemplo:
+            </p>
+            <code>
+              x = 10
+            </code>
+            <p class="text-sub">
+              También puedes declarar y asignar valores a una variable en una sola línea. Por ejemplo:
+            </p>
+            <code>
+              var x int = 10
+            </code>
+            <p class="text-sub">
+              Para declarar una constante en Go, utiliza la palabra clave const seguida del nombre de la constante y su valor. Por ejemplo:
+            </p>
+            <code>
+              const Pi = 3.14159
+            </code>
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="title-section">
+            <div class="title-circle"></div>
+            <div class="title-number">5</div>
+            <p class="title-text">Operadores en Go</p>
+          </div>
+          <div>
+            <p class="text-sub">
+              Go proporciona diferentes tipos de operadores que se utilizan para realizar operaciones aritméticas, de comparación y lógicas. A continuación se describen los principales tipos de operadores en Go:
+            </p>
+            <p class="subtitle-text">
+              Operadores aritméticos
+            </p>
+            <p class="text-sub">
+              Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas, como suma, resta, multiplicación, división y módulo. Los siguientes son los operadores aritméticos en Go:
+            </p>
+            <ul class="list-text">
+              <li>+ (suma)</li>
+              <li>- (resta)</li>
+              <li>* (multiplicación)</li>
+              <li>/ (división)</li>
+              <li>% (módulo)</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := 10<br>
+              b := 3<br>
+              fmt.Println(a + b) // 13<br>
+              fmt.Println(a - b) // 7<br>
+              fmt.Println(a * b) // 30<br>
+              fmt.Println(a / b) // 3<br>
+              fmt.Println(a % b) // 1
+            </code>
+            <p class="subtitle-text">
+              Operadores de comparación
+            </p>
+            <p class="text-sub">
+              Los operadores de comparación se utilizan para comparar dos valores. Los siguientes son los operadores de comparación en Go:
+            </p>
+            <ul class="list-text">
+              <li>== (igual a)</li>
+              <li>!= (diferente de)</li>
+              <li>< (menor que)</li>
+              <li>> (mayor que)</li>
+              <li><= (menor o igual que)</li>
+              <li>>= (mayor o igual que)</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := 10<br>
+              b := 3<br>
+              fmt.Println(a == b) // false<br>
+              fmt.Println(a != b) // true<br>
+              fmt.Println(a < b) // false<br>
+              fmt.Println(a > b) // true<br>
+              fmt.Println(a <= b) // false<br>
+              fmt.Println(a >= b) // true
+            </code>
+            <p class="subtitle-text">
+              Operadores lógicos
+            </p>
+            <p class="text-sub">
+              Los operadores lógicos se utilizan para realizar operaciones lógicas en los valores booleanos. Los siguientes son los operadores lógicos en Go:
+            </p>
+            <ul class="list-text">
+              <li>&& (AND)</li>
+              <li>|| (OR)</li>
+              <li>! (NOT)</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := true<br>
+              b := false<br>
+              fmt.Println(a && b) // false<br>
+              fmt.Println(a || b) // true<br>
+              fmt.Println(!a) // false
+            </code>
+            <p class="subtitle-text">
+              Operadores a nivel de bits
+            </p>
+            <p class="text-sub">
+              Los operadores a nivel de bits se utilizan para realizar operaciones de bits en los valores enteros. Los siguientes son los operadores a nivel de bits en Go:
+            </p>
+            <ul class="list-text">
+              <li>& (AND)</li>
+              <li>| (OR)</li>
+              <li>^ (XOR)</li>
+              <li><< (desplazamiento a la izquierda)</li>
+              <li>>> (desplazamiento a la derecha)</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := 5<br>
+              b := 3<br>
+              fmt.Println(a & b) // 1<br>
+              fmt.Println(a | b) // 7<br>
+              fmt.Println(a ^ b) // 6<br>
+              fmt.Println(a << b) // 40<br>
+              fmt.Println(a >> b) // 0
+            </code>
+          </div>
+      </div>
       </main>
     </section>
     <script src="./scripts.js"></script>
