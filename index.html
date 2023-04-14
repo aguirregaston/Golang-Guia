@@ -230,7 +230,105 @@
               fmt.Println(a >> b) // 0
             </code>
           </div>
-      </div>
+        </div>
+        <div class="content-section">
+          <div class="title-section">
+            <div class="title-circle"></div>
+            <div class="title-number">6</div>
+            <p class="title-text">Estructuras de control de flujo en Go</p>
+          </div>
+          <div>
+            <p class="text-sub">
+              En Go, existen tres estructuras de control de flujo que se utilizan para controlar el flujo de ejecución de un programa. Estas estructuras son:
+            </p>
+            <p class="subtitle-text">
+              Estructura de control if
+            </p>
+            <p class="text-sub">
+              La estructura de control if se utiliza para ejecutar una o varias instrucciones si se cumple una condición. Si la condición no se cumple, se pueden ejecutar otras instrucciones utilizando la estructura else.<br><br>
+
+              Sintaxis:
+            </p>
+            <code>
+              if condicion {<br>
+                // instrucciones a ejecutar si la condición se cumple<br>
+              } else {<br>
+                // instrucciones a ejecutar si la condición no se cumple }
+            </code>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := 10<br>
+              b := 3<br>
+              if a > b {<br>
+                fmt.Println("a es mayor que b")<br>
+              } else {<br>
+                fmt.Println("b es mayor que a")<br>
+              }
+            </code>
+            <p class="subtitle-text">
+              Estructura de control for
+            </p>
+            <p class="text-sub">
+              La estructura de control for se utiliza para ejecutar un conjunto de instrucciones varias veces, hasta que se cumpla una condición.<br><br>
+
+              Sintaxis:
+            </p>
+            <code>
+              for inicialización; condición; incremento {<br>
+                // instrucciones a ejecutar mientras se cumpla la condición<br>
+                }
+            </code>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              for i := 0; i < 5; i++ {<br>
+                fmt.Println(i)<br>
+              }
+            </code>
+            <p class="subtitle-text">
+              Estructura de control switch
+            </p>
+            <p class="text-sub">
+              La estructura de control switch se utiliza para ejecutar diferentes instrucciones según el valor de una variable.<br><br>
+
+              Sintaxis:
+            </p>
+            <code>
+              switch variable {<br>
+                case valor1:<br>
+                  // instrucciones a ejecutar si la variable es igual a valor1<br>
+                case valor2:<br>
+                  // instrucciones a ejecutar si la variable es igual a valor2<br>
+                ...<br>
+                default:<br>
+                  // instrucciones a ejecutar si la variable no es igual a ninguno de los valores anteriores<br>
+                }
+            </code>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              dia := "lunes"<br>
+              switch dia {<br>
+              case "lunes":<br>
+                fmt.Println("Hoy es lunes")<br>
+              case "martes":<br>
+                fmt.Println("Hoy es martes")<br>
+              case "miércoles":<br>
+                fmt.Println("Hoy es miércoles")<br>
+              case "jueves":<br>
+                fmt.Println("Hoy es jueves")<br>
+              case "viernes":<br>
+                fmt.Println("Hoy es viernes")<br>
+              default:<br>
+                fmt.Println("Hoy es fin de semana")<br>
+              }
+            </code>
+          </div>
+        </div>
       </main>
     </section>
     <script src="./scripts.js"></script>
