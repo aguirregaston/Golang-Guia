@@ -329,6 +329,172 @@
             </code>
           </div>
         </div>
+        <div class="content-section">
+          <div class="title-section">
+            <div class="title-circle"></div>
+            <div class="title-number">7</div>
+            <p class="title-text">Funciones en Go</p>
+          </div>
+          <div>
+            <p class="text-sub">
+              En Go, las funciones se utilizan para agrupar un conjunto de instrucciones que se pueden reutilizar en diferentes partes de un programa. Las funciones pueden tener cero o varios parámetros de entrada y pueden devolver uno o varios valores de salida.
+            </p>
+            <p class="subtitle-text">
+              Declaración de funciones
+            </p>
+            <p class="text-sub">
+              La sintaxis para declarar una función en Go es la siguiente:
+            </p>
+            <code>
+              func nombre_funcion(parametro1 tipo1, parametro2 tipo2) tipo_retorno {<br>
+                // instrucciones de la función<br>
+                return valor_retorno<br>
+              }
+            </code>
+            <p class="text-sub">
+              Donde:
+            </p>
+            <ul class="list-text">
+              <li>nombre_funcion: es el nombre que se le da a la función.</li>
+              <li>parametro1, parametro2, etc.: son los parámetros de entrada que recibe la función. Cada parámetro tiene un tipo asociado.</li>
+              <li>tipo_retorno: es el tipo de dato que devuelve la función.</li>
+              <li>valor_retorno:> es el valor que devuelve la función. El valor de retorno puede ser opcional si la función no devuelve ningún valor.</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              func suma(a, b int) int {<br>
+                return a + b<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se define una función llamada suma que recibe dos parámetros de tipo int y devuelve un valor de tipo int.
+            </p>
+            <p class="subtitle-text">
+              Llamada a funciones
+            </p>
+            <p class="text-sub">
+              Para llamar a una función en Go se utiliza la siguiente sintaxis:
+            </p>
+            <code>
+              resultado := nombre_funcion(argumento1, argumento2)
+            </code>
+            <p class="text-sub">
+              Donde:
+            </p>
+            <ul class="list-text">
+              <li>nombre_funcion: es el nombre de la función que se desea llamar.</li>
+              <li>argumento1, argumento2, etc.: son los valores que se pasan como argumentos a la función.</li>
+              <li>resultado: es el valor que devuelve la función.</li>
+            </ul>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              a := 3<br>
+              b := 5<br>
+              resultado := suma(a, b)<br>
+              fmt.Println(resultado)
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se llamar a la función suma con los argumentos a y b, y se guarda el valor de retorno en la variable resultado.
+            </p>
+            <p class="subtitle-text">
+              Funciones variádicas
+            </p>
+            <p class="text-sub">
+              En Go, las funciones también pueden tener un número variable de argumentos. Para esto, se utilizan los argumentos variádicos, que se representan con tres puntos ... después del tipo del último parámetro.<br><br>
+
+              Ejemplo:
+            </p>
+            <code>
+              func suma_variadica(numeros ...int) int {<br>
+                resultado := 0<br>
+                for _, n := range numeros {<br>
+                  resultado += n<br>
+                }<br>
+                return resultado<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se define una función llamada suma_variadica que recibe un número variable de argumentos de tipo int. Dentro de la función, se utiliza un ciclo for para recorrer todos los argumentos y sumarlos.
+            </p>
+            <p class="subtitle-text">
+              Funciones anónimas
+            </p>
+            <p class="text-sub">
+              En Go, también es posible definir funciones anónimas, es decir, funciones sin nombre. Estas funciones se utilizan generalmente como argumentos de otras funciones.<br><br>
+
+              Ejemplo:
+            </p>
+            <code>
+              unc main() {<br>
+                multiplicar := func(a, b int) int {<br>
+                 return a * b<br>
+                }<br>
+                <br>
+                resultado := multiplicar(3, 5)<br>
+                fmt.Println(resultado)<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se define una función anónima que se asigna a la variable multiplicar. Luego, se llama a la función anónima con los argumentos 3 y S, y se guarda el valor de retorno en la variable resultado.
+            </p>
+            <p class="subtitle-text">
+              Funciones recursivas
+            </p>
+            <p class="text-sub">
+              En Go, también es posible definir funciones recursivas, es decir, funciones que se llaman a sí mismas.<br><br>
+
+              Ejemplo:
+            </p>
+            <code>
+              func factorial(n int) int {<br>
+                if n == 0 {<br>
+                 return 1<br>
+                } else {<br>
+                 return n * factorial(n-1)<br>
+                }<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se define una función llamada factorial que calcula el factorial de un número entero utilizando recursividad.
+            </p>
+            <p class="subtitle-text">
+              Funciones como valores
+            </p>
+            <p class="text-sub">
+              En Go, también es posible tratar las funciones como valores, lo que significa que se pueden pasar como argumentos a otras funciones o devolver como valores de una función.<br><br>
+
+              Ejemplo:
+            </p>
+            <code>
+              func aplicar_funcion(f func(int) int, numeros []int) []int {<br>
+                resultado := make([]int, len(numeros))<br>
+                for i, n := range numeros {<br>
+                 resultado[i] = f(n)<br>
+                }<br>
+                return resultado<br>
+              }<br>
+              <br>
+              func doble(n int) int {<br>
+                return n * 2<br>
+              }<br>
+              <br>
+              func main() {<br>
+                numeros := []int{1, 2, 3, 4, 5}<br>
+                resultado := aplicar_funcion(doble, numeros)<br>
+                fmt.Println(resultado)<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se define una función llamada aplicar_funcion que recibe una función como primer parámetro y un slice de enteros como segundo parámetro. Dentro de la función, se recorre el slice y se aplica la función recibida como primer parámetro a cada elemento del slice. Finalmente, se devuelve un nuevo slice con los resultados.<br><br>
+
+              También se define una función llamada doble que simplemente multiplica un número por 2. Luego, se llama a la función aplicar_funcion con la función doble y un slice de números, y se imprime el resultado.
+            </p>
+          </div>
+        </div>
       </main>
     </section>
     <script src="./scripts.js"></script>
