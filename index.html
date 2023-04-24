@@ -495,6 +495,90 @@
             </p>
           </div>
         </div>
+        <div class="content-section">
+          <div class="title-section">
+            <div class="title-circle"></div>
+            <div class="title-number">8</div>
+            <p class="title-text">Punteros en Go</p>
+          </div>
+          <div>
+            <p class="text-sub">
+              En Go, un puntero es una variable que contiene la dirección de memoria de otra variable. Los punteros se utilizan para acceder y modificar el valor de una variable indirectamente.
+            </p>
+            <p class="subtitle-text">
+              Declaración de punteros
+            </p>
+            <p class="text-sub">En Go, se declara un puntero anteponiendo el operador & al nombre de una variable.</p>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              x := 42<br>
+              p := &x
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se declara una variable x con valor 42. Luego, se declara una variable p que es un puntero a x, es decir, que contiene la dirección de memoria de x.
+            </p>
+            <p class="subtitle-text">
+              Acceso al valor de un puntero
+            </p>
+            <p class="text-sub">
+              En Go, se accede al valor de un puntero anteponiendo el operador * al nombre de una variable de tipo puntero.
+            </p>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              x := 42<br>
+              p := &x<br>
+              fmt.Println(*p)
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se imprime el valor de la variable x a través del puntero p. El operador * se utiliza para acceder al valor apuntado por el puntero p.
+            </p>
+            <p class="subtitle-text">
+              Modificación del valor de una variable a través de un puntero
+            </p>
+            <p class="text-sub">
+              En Go, se puede modificar el valor de una variable a través de un puntero utilizando el operador *.
+            </p>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              x := 42<br>
+              p := &x<br>
+              *p = 24<br>
+              fmt.Println(x)
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se imprime el valor de la variable x a través del puntero p. El operador * se utiliza para acceder al valor apuntado por el puntero p.
+            </p>
+            <p class="subtitle-text">
+              Punteros a estructuras
+            </p>
+            <p class="text-sub">
+              En Go, también es posible tener punteros a estructuras.
+            </p>
+            <p class="text-sub">
+              Ejemplo:
+            </p>
+            <code>
+              type Persona struct {<br>
+                nombre string<br>
+                edad int<br>
+              }<br>
+              <br>
+              func main() {<br>
+                p := &Persona{"Juan", 30}<br>
+                fmt.Println(p.nombre, p.edad)<br>
+              }
+            </code>
+            <p class="text-sub">
+              En este ejemplo, se declara una estructura Persona con dos campos: nombre y edad. Luego, se declara una variable p que es un puntero a una estructura Persona con valores iniciales. Finalmente, se imprime el nombre y la edad de la persona a través del puntero p.
+            </p>
+          </div>
+        </div>
       </main>
     </section>
     <script src="./scripts.js"></script>
