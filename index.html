@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <link rel="shortcut icon" href="./images/go-icon.png" />
+  <title>Guía Golang 2023</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-first-section">
+        <img src="./images/golang-logo.png" alt="Golang Logotipo" width="70px" id="golang-logo">
+        <a href="#intro" class="nav-button">
+          <div class="nav-square-link">1</div>
+          <p class="nav-text-link">Introducción</p>
+        </a>
+        <a href="#inst" class="nav-button">
+          <div class="nav-square-link">2</div>
+          <p class="nav-text-link">Instalación</p>
+        </a>
+        <a href="#datos" class="nav-button">
+          <div class="nav-square-link">3</div>
+          <p class="nav-text-link">Tipos de Datos</p>
+        </a>
+        <a href="#var" class="nav-button">
+          <div class="nav-square-link">4</div>
+          <p class="nav-text-link">Variables y Constantes</p>
+        </a>
+        <a href="#oper" class="nav-button">
+          <div class="nav-square-link">5</div>
+          <p class="nav-text-link">Operadores</p>
+        </a>
+        <a href="#estru" class="nav-button">
+          <div class="nav-square-link">6</div>
+          <p class="nav-text-link">Estructuras de Control</p>
+        </a>
+        <a href="#fun" class="nav-button">
+          <div class="nav-square-link">7</div>
+          <p class="nav-text-link">Funciones</p>
+        </a>
+        <a href="#pun" class="nav-button">
+          <div class="nav-square-link">8</div>
+          <p class="nav-text-link">Punteros</p>
+        </a>
+        <a href="#prog" class="nav-button">
+          <div class="nav-square-link">9</div>
+          <p class="nav-text-link">Programación Concurrente</p>
+        </a>
+        <a href="#error" class="nav-button">
+          <div class="nav-square-link">10</div>
+          <p class="nav-text-link">Manejo de errores</p>
+        </a>
+      </div>
+      <div class="nav-second-section">
+        <div class="nav-second-buttons">
+          <a href="https://github.com/aguirregaston" class="nav-second-button button-one" target="_blank">
+            <img src="./images/github-logo.svg" alt="github logotipo" width="15px">
+            <p>Github</p>
+          </a>
+          <a href="https://twitter.com/maxiaguirre_14" class="nav-second-button button-two" target="_blank">
+            <img src="./images/twitter-logotipo.svg" alt="twitter logotipo" width="15px">
+            <p>Twitter</p>
+          </a>
+        </div>
+        <div class="nav-line"></div>
+        <p id="nav-floor-text">Guía de Aprendizaje para <b>Golang</b></p>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <main>
+      <div class="start-section">
+        <h1>Guía de Aprendizaje GOLANG</h1>
+        <div id="point"></div>
+      </div>
+      <div class="section" id="intro">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">1</div>
+          <p class="title-text">Introducción a GO</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">
+            Go es un lenguaje de programación de código abierto creado por Google en 2007. Go es un lenguaje de programación de alto nivel que se centra en la simplicidad, la eficiencia y la concurrencia.
+          </p>
+          <p class="section-subtitle">Sintaxis básica de Go</p>
+          <p class="section-text">
+            La sintaxis básica de Go se asemeja a la de otros lenguajes de programación como C y Java. Los programas de Go se escriben en archivos con extensión <b>.go</b> y se compilan antes de su ejecución.
+          </p>
+          <p class="section-subtitle">Estructuras de datos en Go</p>
+          <p class="section-text">
+            Go proporciona diferentes estructuras de datos para representar datos en la memoria, como arrays, slices, mapas y estructuras.
+          </p>
+          <p class="section-subtitle">Características de concurrencia en Go</p>
+          <p class="section-text">Una de las características más interesantes de Go es su capacidad para gestionar la concurrencia de manera efectiva. Go proporciona goroutines y canales para crear programas concurrentes.</p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="inst">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">2</div>
+          <p class="title-text">Instalación y configuración de Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Para instalar y configurar Go en tu sistema operativo, sigue estos pasos:</p>
+          <div class="install-title">
+            <p>Instalación en Windows</p>
+            <img src="./images/windows-logo.svg" alt="windows logotipo" width="20px">
+          </div>
+          <ol>
+            <li>Descarga el archivo de instalación de Go desde la página oficial de descargas de Go Aquí.</li>
+            <li>Ejecuta el archivo de instalación y sigue las instrucciones del instalador.</li>
+            <li>Asegúrate de añadir Go al PATH del sistema.</li>
+          </ol>
+          <div class="install-title">
+            <p>Instalación en Mac OS</p>
+            <img src="./images/macos-logo.png" alt="macos logotipo" width="25px">
+          </div>
+          <ol>
+            <li>Instala Homebrew Aquí.</li>
+            <li>Ejecuta el siguiente comando en la terminal: <b>brew install go</b>.</li>
+            <li>Asegúrate de añadir Go al PATH del sistema.</li>
+          </ol>
+          <div class="install-title">
+            <p>Instalación en Linux</p>
+            <img src="./images/linux-svg.svg" alt="linux logotipo" width="25px">
+          </div>
+          <ol>
+            <li>Ejecuta el siguiente comando en la terminal: <b>sudo apt-get install golang</b>.</li>
+            <li>Asegúrate de añadir Go al PATH del sistema.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="datos">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">3</div>
+          <p class="title-text">Tipos de Datos en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Go proporciona diferentes tipos de datos para representar diferentes tipos de valores en la memoria. Los tipos de datos básicos en Go son:</p>
+          <ul>
+            <li>bool</li>
+            <li>string</li>
+            <li>int, int8, int16, int32, int64</li>
+            <li>uint, uint8, uint16, uint32, uint64</li>
+            <li>float32, float64</li>
+            <li>complex64, complex128</li>
+          </ul>
+          <p class="section-text">Además, Go proporciona estructuras de datos como array, slice, map y struct.</p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="var">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">4</div>
+          <p class="title-text">Variables y constantes en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Para declarar una variable en Go, utiliza la palabra clave var seguida del nombre de la variable y su tipo. Por ejemplo:</p>
+          <code class="playground">
+            var x int
+          </code>
+          <p class="section-text">Para asignar un valor a una variable, utiliza el operador =. Por ejemplo:</p>
+          <code class="playground">
+            x = 10
+          </code>
+          <p class="section-text">También puedes declarar y asignar valores a una variable en una sola línea. Por ejemplo:</p>
+          <code class="playground">
+            var x int = 10
+          </code>
+          <p class="section-text">Para declarar una constante en Go, utiliza la palabra clave const seguida del nombre de la constante y su valor. Por ejemplo:</p>
+          <code class="playground">
+            const Pi = 3.14159
+          </code>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="oper">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">5</div>
+          <p class="title-text">Operadores en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Go proporciona diferentes tipos de operadores que se utilizan para realizar operaciones aritméticas, de comparación y lógicas. A continuación se describen los principales tipos de operadores en Go:</p>
+          <p class="section-subtitle">Operadores aritméticos</p>
+          <p class="section-text">Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas, como suma, resta, multiplicación, división y módulo. Los siguientes son los operadores aritméticos en Go:</p>
+          <ul>
+            <li>+ (suma)</li>
+            <li>- (resta)</li>
+            <li>* (multiplicación)</li>
+            <li>/ (división)</li>
+            <li>% (módulo)</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := 10
+            b := 3
+            fmt.Println(a + b) // 13
+            fmt.Println(a - b) // 7
+            fmt.Println(a * b) // 30
+            fmt.Println(a / b) // 3
+            fmt.Println(a % b) // 1
+          </code>
+          <p class="section-subtitle">Operadores de comparación</p>
+          <p class="section-text">Los operadores de comparación se utilizan para comparar dos valores. Los siguientes son los operadores de comparación en Go:</p>
+          <ul>
+            <li>== (igual a)</li>
+            <li>!= (diferente de)</li>
+            <li>< (menor que)</li>
+            <li>> (mayor que)</li>
+            <li><= (menor o igual que)</li>
+            <li>>= (mayor o igual que)</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := 10
+            b := 3
+            fmt.Println(a == b) // false
+            fmt.Println(a != b) // true
+            fmt.Println(a < b) // false
+            fmt.Println(a > b) // true
+            fmt.Println(a <= b) // false
+            fmt.Println(a >= b) // true
+          </code>
+          <p class="section-subtitle">Operadores lógicos</p>
+          <p class="section-text">Los operadores lógicos se utilizan para realizar operaciones lógicas en los valores booleanos. Los siguientes son los operadores lógicos en Go:</p>
+          <ul>
+            <li>&& (AND)</li>
+            <li>|| (OR)</li>
+            <li>! (NOT)</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := true
+            b := false
+            fmt.Println(a && b) // false
+            fmt.Println(a || b) // true
+            fmt.Println(!a) // false
+          </code>
+          <p class="section-subtitle">Operadores a nivel de bits</p>
+          <p class="section-text">Los operadores a nivel de bits se utilizan para realizar operaciones de bits en los valores enteros. Los siguientes son los operadores a nivel de bits en Go:</p>
+          <ul>
+            <li>& (AND)</li>
+            <li>| (OR)</li>
+            <li>^ (XOR)</li>
+            <li><< (desplazamiento a la izquierda)</li>
+            <li>>> (desplazamiento a la derecha)</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := 5
+            b := 3
+            fmt.Println(a & b) // 1
+            fmt.Println(a | b) // 7
+            fmt.Println(a ^ b) // 6
+            fmt.Println(a << b) // 40
+            fmt.Println(a >> b) // 0
+          </code>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="estru">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">6</div>
+          <p class="title-text">Estructuras de control de flujo en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">En Go, existen tres estructuras de control de flujo que se utilizan para controlar el flujo de ejecución de un programa. Estas estructuras son:</p>
+          <p class="section-subtitle">Estructura de control if</p>
+          <p class="section-text">
+            La estructura de control if se utiliza para ejecutar una o varias instrucciones si se cumple una condición. Si la condición no se cumple, se pueden ejecutar otras instrucciones utilizando la estructura else.<br><br>
+            Sintaxis:
+          </p>
+          <code class="playground">
+            if condicion {
+              // instrucciones a ejecutar si la condición se cumple
+            } else {
+              // instrucciones a ejecutar si la condición no se cumple }
+          </code>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := 10
+            b := 3
+            if a > b {
+              fmt.Println("a es mayor que b")
+            } else {
+              fmt.Println("b es mayor que a")
+            }
+          </code>
+          <p class="section-subtitle">Estructura de control for</p>
+          <p class="section-text">
+            La estructura de control for se utiliza para ejecutar un conjunto de instrucciones varias veces, hasta que se cumpla una condición.<br><br>Sintaxis:
+          </p>
+          <code class="playground">
+            for inicialización; condición; incremento {
+              // instrucciones a ejecutar mientras se cumpla la condición
+              }
+          </code>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            for i := 0; i < 5; i++ {
+              fmt.Println(i)
+            }
+          </code>
+          <p class="section-subtitle">Estructura de control switch</p>
+          <p class="section-text">
+            La estructura de control switch se utiliza para ejecutar diferentes instrucciones según el valor de una variable.<br><br>Sintaxis:
+          </p>
+          <code class="playground">
+            switch variable {
+              case valor1:
+                // instrucciones a ejecutar si la variable es igual a valor1
+              case valor2:
+                // instrucciones a ejecutar si la variable es igual a valor2
+              ...
+              default:
+                // instrucciones a ejecutar si la variable no es igual a ninguno de los valores anteriores
+              }
+          </code>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            dia := "lunes"
+            switch dia {
+            case "lunes":
+              fmt.Println("Hoy es lunes")
+            case "martes":
+              fmt.Println("Hoy es martes")
+            case "miércoles":
+              fmt.Println("Hoy es miércoles")
+            case "jueves":
+              fmt.Println("Hoy es jueves")
+            case "viernes":
+              fmt.Println("Hoy es viernes")
+            default:
+              fmt.Println("Hoy es fin de semana")
+            }
+          </code>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="fun">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">7</div>
+          <p class="title-text">Funciones en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">
+            En Go, las funciones se utilizan para agrupar un conjunto de instrucciones que se pueden reutilizar en diferentes partes de un programa. Las funciones pueden tener cero o varios parámetros de entrada y pueden devolver uno o varios valores de salida.
+          </p>
+          <p class="section-subtitle">Declaración de funciones</p>
+          <p class="section-text">La sintaxis para declarar una función en Go es la siguiente:</p>
+          <code class="playground">
+            func nombre_funcion(parametro1 tipo1, parametro2 tipo2) tipo_retorno {
+              // instrucciones de la función
+              return valor_retorno
+            }
+          </code>
+          <p class="section-text">Donde:</p>
+          <ul>
+            <li><b>nombre_funcion</b>: es el nombre que se le da a la función.</li>
+            <li><b>parametro1, parametro2, etc.</b>: son los parámetros de entrada que recibe la función. Cada parámetro tiene un tipo asociado.</li>
+            <li><b>tipo_retorno</b>: es el tipo de dato que devuelve la función.</li>
+            <li><b>valor_retorno</b>: es el valor que devuelve la función. El valor de retorno puede ser opcional si la función no devuelve ningún valor.</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            func suma(a, b int) int {
+              return a + b
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, se define una función llamada suma que recibe dos parámetros de tipo int y devuelve un valor de tipo int.
+          </p>
+          <p class="section-subtitle">Llamada a funciones</p>
+          <p class="section-text">Para llamar a una función en Go se utiliza la siguiente sintaxis:</p>
+          <code class="playground">resultado := nombre_funcion(argumento1, argumento2)</code>
+          <p class="section-text">Donde:</p>
+          <ul>
+            <li><b>nombre_funcion</b>: es el nombre de la función que se desea llamar.</li>
+            <li><b>argumento1, argumento2, etc.</b>: son los valores que se pasan como argumentos a la función.</li>
+            <li><b>resultado</b>: es el valor que devuelve la función.</li>
+          </ul>
+          <p class="section-text">Ejemplo:</p>
+          <code class="playground">
+            a := 3
+            b := 5
+            resultado := suma(a, b)
+            fmt.Println(resultado)
+          </code>
+          <p class="section-text">
+            En este ejemplo, se llamar a la función suma con los argumentos a y b, y se guarda el valor de retorno en la variable resultado.
+          </p>
+          <p class="section-subtitle">Funciones variádicas</p>
+          <p class="section-text">
+            En Go, las funciones también pueden tener un número variable de argumentos. Para esto, se utilizan los argumentos variádicos, que se representan con tres puntos ... después del tipo del último parámetro.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func suma_variadica(numeros ...int) int {
+              resultado := 0
+              for _, n := range numeros {
+                resultado += n
+              }
+              return resultado
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, se define una función llamada suma_variadica que recibe un número variable de argumentos de tipo int. Dentro de la función, se utiliza un ciclo for para recorrer todos los argumentos y sumarlos.
+          </p>
+          <p class="section-subtitle">Funciones anónimas</p>
+          <p class="section-text">
+            En Go, también es posible definir funciones anónimas, es decir, funciones sin nombre. Estas funciones se utilizan generalmente como argumentos de otras funciones.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func main() {
+              multiplicar := func(a, b int) int {
+               return a * b
+              }
+            
+              resultado := multiplicar(3, 5)
+              fmt.Println(resultado)
+            }
+          </code>
+          <p class="section-text">En este ejemplo, se define una función anónima que se asigna a la variable multiplicar. Luego, se llama a la función anónima con los argumentos 3 y S, y se guarda el valor de retorno en la variable resultado.</p>
+          <p class="section-subtitle">Funciones recursivas</p>
+          <p class="section-text">
+            En Go, también es posible definir funciones recursivas, es decir, funciones que se llaman a sí mismas.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func factorial(n int) int {
+              if n == 0 {
+               return 1
+              } else {
+               return n * factorial(n-1)
+              }
+            }
+          </code>
+          <p class="section-text">En este ejemplo, se define una función llamada factorial que calcula el factorial de un número entero utilizando recursividad.</p>
+          <p class="section-subtitle">Funciones como valores</p>
+          <p class="section-text">
+            En Go, también es posible tratar las funciones como valores, lo que significa que se pueden pasar como argumentos a otras funciones o devolver como valores de una función.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func aplicar_funcion(f func(int) int, numeros []int) []int {
+              resultado := make([]int, len(numeros))
+              for i, n := range numeros {
+               resultado[i] = f(n)
+              }
+              return resultado
+            }
+            
+            func doble(n int) int {
+              return n * 2
+            }
+            
+            func main() {
+              numeros := []int{1, 2, 3, 4, 5}
+              resultado := aplicar_funcion(doble, numeros)
+              fmt.Println(resultado)
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, se define una función llamada aplicar_funcion que recibe una función como primer parámetro y un slice de enteros como segundo parámetro. Dentro de la función, se recorre el slice y se aplica la función recibida como primer parámetro a cada elemento del slice. Finalmente, se devuelve un nuevo slice con los resultados.<br><br>
+
+            También se define una función llamada doble que simplemente multiplica un número por 2. Luego, se llama a la función aplicar_funcion con la función doble y un slice de números, y se imprime el resultado.
+          </p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="pun">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">8</div>
+          <p class="title-text">Punteros en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">En Go, un puntero es una variable que contiene la dirección de memoria de otra variable. Los punteros se utilizan para acceder y modificar el valor de una variable indirectamente.</p>
+          <p class="section-subtitle">Declaración de punteros</p>
+          <p class="section-text">
+            En Go, se declara un puntero anteponiendo el operador & al nombre de una variable.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            x := 42
+            p := &x
+          </code>
+          <p class="section-text">En este ejemplo, se declara una variable x con valor 42. Luego, se declara una variable p que es un puntero a x, es decir, que contiene la dirección de memoria de x.</p>
+          <p class="section-subtitle">Acceso al valor de un puntero</p>
+          <p class="section-text">En Go, se accede al valor de un puntero anteponiendo el operador * al nombre de una variable de tipo puntero.<br><br>Ejemplo:</p>
+          <code class="playground">
+            x := 42
+            p := &x
+            fmt.Println(*p)
+          </code>
+          <p class="section-text">En este ejemplo, se imprime el valor de la variable x a través del puntero p. El operador * se utiliza para acceder al valor apuntado por el puntero p.</p>
+          <p class="section-subtitle">Modificación del valor de una variable a través de un puntero</p>
+          <p class="section-text">En Go, se puede modificar el valor de una variable a través de un puntero utilizando el operador *.<br><br>Ejemplo:</p>
+          <code class="playground">
+            x := 42
+            p := &x
+            *p = 24
+            fmt.Println(x)
+          </code>
+          <p class="section-text">En este ejemplo, se imprime el valor de la variable x a través del puntero p. El operador * se utiliza para acceder al valor apuntado por el puntero p.</p>
+          <p class="section-subtitle">Punteros a estructuras</p>
+          <p class="section-text">
+            En Go, también es posible tener punteros a estructuras.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            type Persona struct {
+              nombre string
+              edad int
+            }
+            
+            func main() {
+              p := &Persona{"Juan", 30}
+              fmt.Println(p.nombre, p.edad)
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, se declara una estructura Persona con dos campos: nombre y edad. Luego, se declara una variable p que es un puntero a una estructura Persona con valores iniciales. Finalmente, se imprime el nombre y la edad de la persona a través del puntero p.
+          </p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="prog">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">9</div>
+          <p class="title-text">Programación concurrente en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Go ofrece soporte nativo para la programación concurrente, lo que significa que se pueden ejecutar varias tareas simultáneamente. La programación concurrente en Go se basa en la comunicación a través de canales y en el uso de goroutines.</p>
+          <p class="section-subtitle">Goroutines</p>
+          <p class="section-text">
+            En Go, una goroutine es una tarea que se ejecuta en segundo plano. Las goroutines se pueden crear utilizando la palabra clave go seguida de una función.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func main() {
+              go miFuncion()
+            }
+            
+            func miFuncion() {
+              // ...
+            }
+          </code>
+          <p class="section-text">En este ejemplo, se crea una goroutine que ejecuta la función miFuncion()> en segundo plano. La función main() continúa su ejecución sin esperar a que la goroutine termine.</p>
+          <p class="section-subtitle">Canales</p>
+          <p class="section-text">
+            En Go, los canales se utilizan para la comunicación entre goroutines. Un canal es una tubería que conecta una o varias goroutines y que permite el intercambio de valores.<br><br>Para declarar un canal en Go, se utiliza la función make() y se especifica el tipo de datos que se van a transmitir por el canal.<br><br>Ejemplo:
+          </p>
+          <code class="playground">miCanal := make(chan int)</code>
+          <p class="section-text">
+            En este ejemplo, se declara un canal miCanal que transmite valores de tipo int.<br><br>Para enviar un valor a través de un canal, se utiliza el operador <- y el nombre del canal.<br><br>Ejemplo:
+          </p>
+          <code class="playground">miCanal <- 42</code>
+          <p class="section-text">
+            En este ejemplo, se envía el valor 42 a través del canal miCanal.<br><br>Para recibir un valor a través de un canal, se utiliza el operador <- y el nombre del canal.<br><br>Ejemplo:
+          </p>
+          <code class="playground">x := <-miCanal</code>
+          <p class="section-text">En este ejemplo, se recibe un valor a través del canal miCanal y se almacena en la variable x.</p>
+          <p class="section-subtitle">Select</p>
+          <p class="section-text">El bloque select se utiliza en Go para esperar a que ocurra un evento en cualquiera de los canales especificados. Ejemplo:</p>
+          <code class="playground">
+            select {
+              case <-canal1:
+               // ...
+              case <-canal2:
+               // ...
+            }
+          </code>
+          <p class="section-text">En este ejemplo, el bloque select espera a que ocurra un evento en cualquiera de los canales canal1 o canal2.</p>
+          <p class="section-subtitle">Mutex</p>
+          <p class="section-text">
+            En Go, un mutex se utiliza para sincronizar el acceso a una variable compartida entre varias goroutines.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            var x int
+            var mutex sync.Mutex
+
+            func miFuncion() {
+              mutex.Lock()
+              defer mutex.Unlock()
+              // Operaciones con la variable x
+            }
+          </code>
+          <p class="section-text">En este ejemplo, se declara una variable x que es compartida entre varias goroutines. Se utiliza un mutex sync.Mutex para sincronizar el acceso a la variable x. La función miFuncion() bloquea el mutex utilizando el método Lock() antes de realizar operaciones con la variable x. El método defer asegura que el mutex se desbloqueará automáticamente al finalizar la ejecución de la función.</p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <div class="section" id="error">
+        <div class="section-title">
+          <div class="title-circle"></div>
+          <div class="title-square">10</div>
+          <p class="title-text">Manejo de errores en Go</p>
+        </div>
+        <div class="section-content">
+          <p class="section-text">Go tiene un enfoque un poco diferente al manejo de errores en comparación con otros lenguajes de programación. En lugar de lanzar excepciones, Go utiliza valores de retorno para indicar si una función ha producido un error.</p>
+          <p class="section-subtitle">Valores de retorno</p>
+          <p class="section-text">
+            En Go, una función puede devolver uno o varios valores. En el caso del manejo de errores, es común que una función devuelva un valor y un error.<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func miFuncion() (string, error) {
+              // ...
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, la función miFuncion() devuelve un valor de tipo string y un valor de tipo error.<br><br>Si la función miFuncion() produce un error, se puede devolver un valor de error utilizando la función fmt.Errorf().<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func miFuncion() (string, error) {
+              if err := algunaOperacion(); err != nil {
+               return "", fmt.Errorf("error en algunaOperacion: %s", err)
+              }
+              // ...
+            }
+          </code>
+          <p class="section-text">En este ejemplo, si la función algunaOperacion() produce un error, se devuelve un valor de error utilizando la función fmt.Errorf().</p>
+          <p class="section-subtitle">Panic y recover</p>
+          <p class="section-text">
+            En Go, la función panic() se utiliza para indicar que algo inesperado ha ocurrido y que no se puede continuar con la ejecución del programa. La función recover() se utiliza para recuperar el control después de un panic().<br><br>Ejemplo:
+          </p>
+          <code class="playground">
+            func miFuncion() {
+              defer func() {
+               if r := recover(); r != nil {
+               log.Println("recuperado en miFuncion:", r)
+              }
+              }()
+              // ...
+              if algoInesperado {
+              panic("algo inesperado ha ocurrido")
+              }
+              // ...
+            }
+          </code>
+          <p class="section-text">
+            En este ejemplo, la función miFuncion() utiliza la función defer para recuperar el control después de un panic(). Si ocurre un panic(), se llama a la función anónima que utiliza recover() para recuperar el control y realizar alguna acción.
+          </p>
+          <p class="section-subtitle">Conclusiones</p>
+          <p class="section-text">En Go, el manejo de errores se basa en el uso de valores de retorno y en el control explícito de errores utilizando la función fmt.Errorf(). La función panic() se utiliza en situaciones en las que no se puede continuar con la ejecución del programa y la función recover() se utiliza para recuperar el control después de un panic().</p>
+        </div>
+      </div>
+      <div class="section-line"></div>
+    </main>
+  </section>
+</body>
+</html>
+    <script src="script.js"></script>
+  </body>
+</html>
