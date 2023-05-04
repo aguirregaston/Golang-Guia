@@ -81,7 +81,7 @@ nav {
 
 #nav-floor-text {
   color: var(--color-initial);
-  font-size: 13px;
+  font-size: 0.8em;
 }
 
 .nav-second-buttons {
@@ -239,6 +239,57 @@ li {
   line-height: 1.5em;
 }
 
-@media screen and (max-width: 700px) {
-  
+@media screen and (max-width: 767px) {
+  section {
+    padding-left: 15%;
+  }
+
+  nav {
+    width: 10%;
+    padding: 2%;
+  }
+
+  #golang-logo {
+    width: 40px;
+    margin-top: 50px;
+  }
+
+  .nav-button {
+    justify-content: center;
+  }
+
+  .nav-text-link {
+    display: none;
+  }
+
+  .nav-second-buttons {
+    flex-direction: column;
+  }
+
+  .nav-second-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-second-button p {
+    display: none;
+  }
+
+  #nav-floor-text {
+    font-size: 0.56em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    display: none;
+  }
+
+  section {
+    padding-left: 5%;
+  }
+
+  #point {
+    display: none;
+  }
 }
