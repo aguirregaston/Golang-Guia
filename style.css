@@ -101,6 +101,12 @@ nav {
   gap: 0.3em;
   font-size: 0.8em;
   color: #000;
+
+  transition: all 0.3s ease;
+}
+
+.nav-second-button:hover {
+  filter: brightness(0.8);
 }
 
 .button-one {
