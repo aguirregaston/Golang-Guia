@@ -149,13 +149,6 @@ main {
   margin-bottom: 3em;
 }
 
-#point {
-  width: 1.2em;
-  height: 1.2em;
-  background: #fff;
-  border-radius: 50%;
-}
-
 .install-title {
   display: flex;
   align-items: center;
@@ -297,9 +290,5 @@ li {
 
   section {
     padding-left: 5%;
-  }
-
-  #point {
-    display: none;
   }
 }
