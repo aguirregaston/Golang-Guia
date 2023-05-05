@@ -54,7 +54,6 @@ nav {
   background: transparent;
   color: var(--color-initial);
   font-size: 14px;
-  transition: all 0.3s ease;
   text-decoration: none;
   user-select: none;
 }
